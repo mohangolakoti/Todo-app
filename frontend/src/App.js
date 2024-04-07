@@ -25,11 +25,10 @@ const App = () => {
   };
   return (
     <div className="todo">
-        <img className="image" src={bg}/>
-        <center>
+        <img className="image" src={bg} alt=""/>
         <div className="container">
         <h1 className="h1 m-4">TODO APP</h1>
-        <div className="card m-2" style={{ width: "700px" }}>
+        <div className="card m-2">
           <form className="input-group" onSubmit={submitHandler}>
             <input
               type="text"
@@ -42,7 +41,7 @@ const App = () => {
             <br />
           </form>
           {item.map((ele) => (
-            <div className="card-body" style={{display:'flex',justifyContent:'center'}} key={ele._id}>
+            <div className="card-body" key={ele._id}>
               <h4 className="card-text m-2" style={{ display: ""}}>
                 {ele.todo}
               </h4>
@@ -102,7 +101,6 @@ const App = () => {
           ))}
         </div>
         </div>
-      </center>
     </div>
   );
 };
